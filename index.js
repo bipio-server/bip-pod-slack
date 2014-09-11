@@ -20,8 +20,8 @@ var Pod = require('bip-pod'),
   https = require('https'),
 Slack = new Pod({
   name : 'slack',
-  description : 'Slack',
-  description_long : '<a href="https://slack.com">Slack</a> brings all your communication together in one place. It\'s real-time messaging, archiving and search for modern teams.',
+  title : 'Slack',
+  description : '<a href="https://slack.com">Slack</a> brings all your communication together in one place. It\'s real-time messaging, archiving and search for modern teams.',
   authType : 'oauth',
   passportStrategy : require('passport-slack').Strategy,
   config : {
@@ -95,7 +95,7 @@ Slack.slackRequestParsed = function(path, params, sysImports, next, method) {
 
 Slack.rpc = function(action, method, sysImports, options, channel, req, res) {
   var pod = this.pod;
-  
+
   if (method == 'channels_list') {
     this.slackRequest(
       'channels.list',

@@ -19,8 +19,8 @@ var util = require('util');
 
 function PostMessage(podConfig) {
   this.name = 'post_message';
-  this.description = 'Post to Channel',
-  this.description_long = 'Posts a Message to a Channel',
+  this.title = 'Post to Channel',
+  this.description = 'Posts a Message to a Channel',
   this.trigger = false;
   this.singleton = false;
   this.auto = false;
@@ -59,7 +59,8 @@ PostMessage.prototype.getSchema = function() {
           "type" :  "string",
           "description" : "Message Text"
         }
-      }
+      },
+      "required" : [ "text" ]
     },
     "exports": {
       "properties" : {
