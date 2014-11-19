@@ -1,0 +1,80 @@
+{
+  "name": "slack",
+  "title": "Slack",
+  "description": "<a href=\"https://slack.com\">Slack</a> brings all your communication together in one place. It's real-time messaging, archiving and search for modern teams.",
+  "url": "",
+  "trackDuplicates": false,
+  "config": {
+    "oauth": {
+      "clientID": "",
+      "clientSecret": "",
+      "scopes": [
+        "identify",
+        "read",
+        "post"
+      ]
+    }
+  },
+  "auth": {
+    "strategy": "oauth"
+  },
+  "rpcs": {
+    "channels_list": {
+      "contentType": "application/json",
+      "title": "Get Channels"
+    }
+  },
+  "actions": {
+    "post_message": {
+      "title": "Post to Channel",
+      "description": "Posts a Message to a Channel",
+      "trigger": "invoke",
+      "config": {
+        "properties": {
+          "channel": {
+            "type": "string",
+            "description": "Channel ID",
+            "oneOf": [
+              {
+                "$ref": "/renderers/channels_list#channels/{id}"
+              }
+            ],
+            "label": {
+              "$ref": "/renderers/channels_list#channels/{name}"
+            }
+          },
+          "username": {
+            "type": "string",
+            "description": "Bot Name (optional)"
+          }
+        },
+        "disposition": [
+          "channel",
+          "username"
+        ]
+      },
+      "exports": {
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "description": "Response Status"
+          }
+        }
+      },
+      "imports": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "Message Text"
+          }
+        },
+        "required": [
+          "text"
+        ],
+        "disposition": [
+          "text"
+        ]
+      }
+    }
+  }
+}

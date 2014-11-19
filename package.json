@@ -1,13 +1,13 @@
 {
   "name": "bip-pod-slack",
-  "version": "0.0.3",
-  "author" : "Michael Pearson",
+  "version": "0.0.4",
+  "author": "Michael Pearson",
   "description": "Slack Pod for Bipio",
   "keywords": [
-  "bip",
-  "bipio",
-  "pod",
-  "slack"
+    "bip",
+    "bipio",
+    "pod",
+    "slack"
   ],
   "repository": {
     "type": "git",
@@ -17,14 +17,13 @@
     "url": "http://github.com/bipio-server/bip-pod-slack/issues"
   },
   "licenses": [
-  {
-    "type": "GNU GPLv3",
-    "url": "http://www.gnu.org/copyleft/gpl.html"
-  }
+    {
+      "type": "GNU GPLv3",
+      "url": "http://www.gnu.org/copyleft/gpl.html"
+    }
   ],
   "main": ".",
   "dependencies": {
-    "bip-pod" : ">=0.0.1",
     "passport-slack": ">=0.0.1"
   },
   "engines": {
