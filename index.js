@@ -18,30 +18,7 @@
 var Pod = require('bip-pod'),
   qs = require('querystring'),
   https = require('https'),
-Slack = new Pod({
-  name : 'slack',
-  title : 'Slack',
-  description : '<a href="https://slack.com">Slack</a> brings all your communication together in one place. It\'s real-time messaging, archiving and search for modern teams.',
-  authType : 'oauth',
-  passportStrategy : require('passport-slack').Strategy,
-  config : {
-    "oauth": {
-      "clientID" : "",
-      "clientSecret" : "",
-      "scopes" : [
-      "identify",
-      "read",
-      "post"
-      ]
-    }
-  },
-  'renderers' : {
-    'channels_list' : {
-      description : 'Get Channels',
-      contentType : DEFS.CONTENTTYPE_JSON
-    }
-  }
-});
+  Slack = new Pod();
 
 Slack.getParameters = function(path, query, sysImports) {
   var auth = {
@@ -109,9 +86,6 @@ Slack.rpc = function(action, method, sysImports, options, channel, req, res) {
     this.__proto__.rpc.apply(this, arguments);
   }
 }
-
-// Include any actions
-Slack.add(require('./postmessage.js'));
 
 // -----------------------------------------------------------------------------
 module.exports = Slack;

@@ -1,8 +1,8 @@
 {
   "name": "slack",
   "title": "Slack",
-  "description": "<a href=\"https://slack.com\">Slack</a> brings all your communication together in one place. It's real-time messaging, archiving and search for modern teams.",
-  "url": "",
+  "description": "Slack brings all your communication together in one place. It's real-time messaging, archiving and search for modern teams.",
+  "url": "https://slack.com",
   "trackDuplicates": false,
   "config": {
     "oauth": {
