@@ -22,7 +22,7 @@ var Pod = require('bip-pod'),
 
 Slack.getParameters = function(path, query, sysImports) {
   var auth = {
-    token : sysImports.auth.oauth.token
+    token : sysImports.auth.oauth.access_token
   };
 
   return '/api/'
