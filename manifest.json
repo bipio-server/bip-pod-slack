@@ -45,11 +45,11 @@
             "description": "Channel ID",
             "oneOf": [
               {
-                "$ref": "/renderers/channels_list#channels/{id}"
+                "$ref": "/rpcs/channels_list#channels/{id}"
               }
             ],
             "label": {
-              "$ref": "/renderers/channels_list#channels/{name}"
+              "$ref": "/rpcs/channels_list#channels/{name}"
             }
           },
           "username": {
