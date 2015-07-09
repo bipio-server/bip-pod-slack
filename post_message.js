@@ -25,10 +25,6 @@ PostMessage.prototype = {};
 PostMessage.prototype.invoke = function(imports, channel, sysImports, contentParts, next) {
 
   var params = JSON.parse(JSON.stringify(imports));
-  params.channel = imports.channel;
-  if (imports.username) {
-    params.username = imports.username;
-  }
 
   this.pod.slackRequestParsed('chat.postMessage', params, sysImports, next);
 }
