@@ -20,6 +20,10 @@ var Pod = require('bip-pod'),
   https = require('https'),
   Slack = new Pod();
 
+Slack.profileReprOAuth = function(profile) {
+  return profile.user + ' - ' + profile.team;
+}
+
 Slack.getParameters = function(path, query, sysImports) {
   var auth = {
     token : sysImports.auth.oauth.access_token
