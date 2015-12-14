@@ -10,8 +10,7 @@
       "clientSecret": "",
       "scopes": [
         "identify",
-        "read",
-        "post"
+        "chat:write:bot"
       ]
     }
   },
