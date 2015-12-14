@@ -10,7 +10,8 @@
       "clientSecret": "",
       "scopes": [
         "identify",
-        "chat:write:bot"
+        "chat:write:bot",
+        "channels:read"
       ]
     }
   },
