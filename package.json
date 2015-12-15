@@ -1,6 +1,6 @@
 {
   "name": "bip-pod-slack",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "author": "Michael Pearson",
   "description": "Slack Pod for Bipio",
   "keywords": [
