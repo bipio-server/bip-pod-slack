@@ -9,7 +9,7 @@
       "clientID": "",
       "clientSecret": "",
       "scopes": [
-        "identify",
+        "users:read",
         "chat:write:bot",
         "channels:read"
       ]
